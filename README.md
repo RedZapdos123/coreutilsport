@@ -12,7 +12,10 @@ zopen install coreutils
 ```
 
 This z/OS port currently ships the following subset of GNU coreutils commands.
-This list mirrors the commands retained by the `ZOPEN_COREUTILS` allowlist in `buildenv`.
+By default, the installed commands are available with a `g` prefix to avoid
+collisions with z/OS `/bin` tools, for example `cp` as `gcp` and `ls` as `gls`.
+This list mirrors the commands retained by the `ZOPEN_COREUTILS` allowlist in
+`buildenv`.
 ```text
 b2sum base32 base64 basename blake2 cat chcon chgrp chmod chown chroot chksum
 comm cp csplit cut date dd dir dircolors dirname df du echo env expand expr
